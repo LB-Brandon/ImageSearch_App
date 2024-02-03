@@ -33,7 +33,6 @@ class SearchFragment : Fragment() {
                 viewModel.onClickItem(it)
             }
         )
-
     }
 
     companion object {

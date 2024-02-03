@@ -10,7 +10,6 @@ import com.google.gson.reflect.TypeToken
 object SharedPreferencesUtils {
 
     private const val PREFS_NAME = "MyPrefs"
-
     fun saveBookmarkedItems(context: Context, bookmarkedList: List<BookmarkedItemModel>?) {
         bookmarkedList?.let {
             val jsonStringList = it.map { bookmarkedItemModel ->

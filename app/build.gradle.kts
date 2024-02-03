@@ -26,7 +26,7 @@ android {
         }
         debug {
             android.buildFeatures.buildConfig = true
-            buildConfigField("String", "API_KEY", getApiKey("API_KEY"))
+//            buildConfigField("String", "API_KEY", getApiKey("API_KEY"))
         }
     }
     compileOptions {
@@ -68,6 +68,6 @@ dependencies {
     implementation ("com.jakewharton.timber:timber:5.0.1")
 }
 
-fun getApiKey(propertyKey: String): String {
-    return com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir).getProperty(propertyKey)
-}
+//fun getApiKey(propertyKey: String): String {
+//    return com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir).getProperty(propertyKey)
+//}

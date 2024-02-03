@@ -9,7 +9,7 @@ import timber.log.Timber
 
 object NetworkClient {
     private const val KAKAO_API_BASE_URL = "https://dapi.kakao.com/"
-
+    private const val API_KEY = "KakaoAK c2f850eb276516bb881564663fd727eb"
     // 로깅 Interceptor
     private val loggingInterceptor = HttpLoggingInterceptor { message -> // Timber를 사용하여 로그를 출력
         Timber.tag("OkHttp").e(message)
@@ -19,7 +19,7 @@ object NetworkClient {
 
     // OkHttpClient 설정
     private val okHttpClient = OkHttpClient.Builder().addInterceptor {
-        val request = it.request().newBuilder().addHeader("Authorization", "${BuildConfig.API_KEY}").build()
+        val request = it.request().newBuilder().addHeader("Authorization", API_KEY).build()
         it.proceed(request)
     }.addInterceptor(loggingInterceptor).build()
 
